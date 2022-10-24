@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-k8s_test_web
+  labels:
+    app: k8s_test_web
+    service: web
+spec:
+  containers:
+    - image: roxsross12/k8s_test_web:latest
+        name: container-k8s_test_web
+        imagePullPolicy: Always
