@@ -13,9 +13,13 @@ Los comandos utilizados en este reto fueron los siguientes:
 
     kubectl get nodes -o wide
 
+    minikube stop
+
 ### Challenge 2
 Los comandos utilizados en este reto fueron los siguientes:
     
+    minikube start
+
     kubectl create -f pod.yaml
 
     kubectl get pods
@@ -29,3 +33,5 @@ Los comandos utilizados en este reto fueron los siguientes:
     kubectl logs pod-k8s-test-web
 
     kubectl delete pod pod-k8s-test-web
+
+    minikube stop
