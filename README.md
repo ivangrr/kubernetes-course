@@ -35,3 +35,20 @@ Los comandos utilizados en este reto fueron los siguientes:
     kubectl delete pod pod-k8s-test-web
 
     minikube stop
+
+### Challenge 3
+Los comandos utilizados en este reto fueron los siguientes:
+    
+    minikube start
+
+    kubectl create -f pod-multicontenedor.yaml
+
+    kubectl get pods
+
+    kubectl exec pod-multicontenedor -c contenedor1 -- /bin/cat /usr/share/nginx/html/index.html
+
+    kubectl exec pod-multicontenedor -c contenedor2 -- /bin/cat /html/index.html
+
+    kubectl port-forward pod-multicontenedor 8081:80
+
+    minikube stop
