@@ -6,6 +6,7 @@ https://github.com/roxsross/k8sonfire
 
 ### Challenge 1
 Los comandos utilizados en este reto fueron los siguientes:
+    
     minikube start
 
     minikube status
@@ -14,6 +15,7 @@ Los comandos utilizados en este reto fueron los siguientes:
 
 ### Challenge 2
 Los comandos utilizados en este reto fueron los siguientes:
+    
     kubectl create -f pod.yaml
 
     kubectl get pods
