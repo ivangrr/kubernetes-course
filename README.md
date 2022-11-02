@@ -107,10 +107,15 @@ Los comandos utilizados en este reto fueron los siguientes:
 
     minikube stop
 
+### Comandos en general
 ReplicaSet:
+    
     kubectl get rs
+    
     kubectl get rs,pods
+    
     kubectl describe rs/frontend
+    
     kubectl apply -f [file]
 
-kubectl config view --minify --raw
+    kubectl config view --minify --raw
