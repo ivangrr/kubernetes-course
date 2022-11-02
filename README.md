@@ -3,6 +3,37 @@ Curso de kubernetes:
 
 Referencias:
 https://github.com/roxsross/k8sonfire
+https://killercoda.com
+
+### Problemas encontrados durante este curso
+Si tienes problemas para instalar lens in linux:
+
+Borra el archivo nosnap.pref:
+    
+    sudo rm /etc/apt/preferences.d/nosnap.pref
+
+Actualiza apt:
+
+    sudo apt update
+
+Instala snapd:
+
+    sudo apt install snapd
+
+Baja el archivo .snap de la pagina oficial
+
+Instala lens:
+
+    sudo snap install Lens-{version}.amd64.snap --dangerous --classic
+Ejemplo:
+    sudo snap install Lens-2022.10.181357-latest.amd64.snap --dangerous --classic
+
+Iniciar lens:
+    lens
+
+Referencia: 
+https://unix.stackexchange.com/questions/593366/how-to-enable-snaps-support-on-linux-mint-20
+
 
 ### Challenge 1
 Los comandos utilizados en este reto fueron los siguientes:
@@ -52,3 +83,34 @@ Los comandos utilizados en este reto fueron los siguientes:
     kubectl port-forward pod-multicontenedor 8081:80
 
     minikube stop
+
+### Challenge 4
+Los comandos utilizados en este reto fueron los siguientes:
+
+    minikube start
+
+    kubectl apply -f rs.yaml
+
+    kubectl get rs,pods
+
+    kubectl describe rs replicaset-k8s-test-web
+
+    kubectl delete pod [nombre_pod]
+
+    kubectl get pods
+
+    kubectl scale rs replicaset-k8s-test-web --replicas=4
+
+    kubectl get pods
+
+    kubectl delete rs replicaset-k8s-test-web
+
+    minikube stop
+
+ReplicaSet:
+    kubectl get rs
+    kubectl get rs,pods
+    kubectl describe rs/frontend
+    kubectl apply -f [file]
+
+kubectl config view --minify --raw
