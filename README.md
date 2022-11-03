@@ -107,6 +107,31 @@ Los comandos utilizados en este reto fueron los siguientes:
 
     minikube stop
 
+### Challenge 5
+Los comandos utilizados en este reto fueron los siguientes:
+
+    minikube start
+
+    kubectl apply -f deploy.yaml
+
+    kubectl get deploy,rs,pods
+
+    kubectl describe deployment/deployment-k8s-test-web
+
+    kubectl port-forward deployment/deployment-k8s-test-web 8080:80
+
+    kubectl logs deployment/deployment-k8s-test-web
+    
+    kubectl get all
+
+    kubectl scale deployment deployment-k8s-test-web --replicas=4
+
+    kubectl delete deployment deployment-k8s-test-web
+
+    kubectl get pods
+
+    minikube stop
+
 ### Comandos en general
 ReplicaSet:
     
