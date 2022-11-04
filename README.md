@@ -132,6 +132,33 @@ Los comandos utilizados en este reto fueron los siguientes:
 
     minikube stop
 
+### Challenge 6
+Los comandos utilizados en este reto fueron los siguientes:
+
+    minikube start
+
+    kubectl apply -f deploy.yaml
+
+    kubectl annotate deployment/deployment-k8s-test-web kubernetes.io/change-cause="Primer despliegue versión 1"
+
+    kubectl get all
+
+    kubectl port-forward deployment/deployment-k8s-test-web 8080:80
+
+    kubectl set image deployment/deployment-k8s-test-web contenedor-k8s-test-web=k8s-test-web:2
+    kubectl port-forward deployment/deployment-k8s-test-web 8080:80
+    kubectl rollout history deploymentkubectl rollout history deployment/deployment-k8s-test-web
+    
+    kubectl get all
+
+    kubectl rollout history deployment/deployment-k8s-test-web
+
+    kubectl delete deployment/deployment-k8s-test-web
+
+    kubectl get pods
+
+    minikube stop
+
 ### Comandos en general
 ReplicaSet:
     
