@@ -234,3 +234,5 @@ spec:
             name: nginx
             port:
               number: 80
+
+https://github.com/roxsross/k8s-challenge
