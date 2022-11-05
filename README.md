@@ -206,3 +206,10 @@ aws_secret_access_key=2yk/OJ2xg+aVY5UfpnjaSK7LJnvGcF/2TiHOewcY
 region=us-east-1
 
 aws eks update-kubeconfig --region us-east-1 --name eks-k8s
+
+
+https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.0/deploy/static/provider/cloud/deploy.yaml
+
+roxsross12/flask-app
+
+roxsross12/consumer
