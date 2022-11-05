@@ -213,3 +213,24 @@ https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.0/dep
 roxsross12/flask-app
 
 roxsross12/consumer
+
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-nginx
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: 
+    http:
+      paths:
+      - path: /test 
+        pathType: Prefix
+        backend:
+          service:
+            name: nginx
+            port:
+              number: 80
