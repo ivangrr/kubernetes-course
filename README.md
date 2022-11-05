@@ -204,3 +204,5 @@ ReplicaSet:
 aws_access_key_id=AKIA2G62AXCCQZCL3H4D
 aws_secret_access_key=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
 region=us-east-1
+
+aws eks update-kubeconfig --region us-east-1 --name eks-k8s
