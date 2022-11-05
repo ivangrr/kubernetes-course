@@ -139,15 +139,27 @@ Los comandos utilizados en este reto fueron los siguientes:
 
     kubectl apply -f deploy.yaml
 
-    kubectl annotate deployment/deployment-k8s-test-web kubernetes.io/change-cause="Primer despliegue versión 1"
+    kubectl annotate deployment/deployment-k8s-test-web kubernetes.io/change-cause="Despliegue versión 1"
 
     kubectl get all
 
     kubectl port-forward deployment/deployment-k8s-test-web 8080:80
 
-    kubectl set image deployment/deployment-k8s-test-web contenedor-k8s-test-web=k8s-test-web:2
+    kubectl apply -f deploy.yaml
+    
+    kubectl annotate deployment/deployment-k8s-test-web kubernetes.io/change-cause="Despliegue versión 2"
+
     kubectl port-forward deployment/deployment-k8s-test-web 8080:80
-    kubectl rollout history deploymentkubectl rollout history deployment/deployment-k8s-test-web
+    
+    kubectl rollout history deployment/deployment-k8s-test-web
+    
+    kubectl apply -f deploy.yaml
+    
+    kubectl annotate deployment/deployment-k8s-test-web kubernetes.io/change-cause="Despliegue versión 3"
+
+    kubectl port-forward deployment/deployment-k8s-test-web 8080:80
+
+    kubectl rollout history deployment rollout history deployment-k8s-test-web
     
     kubectl get all
 
