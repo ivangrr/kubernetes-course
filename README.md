@@ -198,3 +198,9 @@ ReplicaSet:
     kubectl apply -f [file]
 
     kubectl config view --minify --raw
+
+
+[default]
+aws_access_key_id=AKIA2G62AXCCQZCL3H4D
+aws_secret_access_key=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
+region=us-east-1
