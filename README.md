@@ -152,22 +152,37 @@ Los comandos utilizados en este reto fueron los siguientes:
     kubectl port-forward deployment/deployment-k8s-test-web 8080:80
     
     kubectl rollout history deployment/deployment-k8s-test-web
-    
+
     kubectl apply -f deploy.yaml
     
     kubectl annotate deployment/deployment-k8s-test-web kubernetes.io/change-cause="Despliegue versión 3"
 
     kubectl port-forward deployment/deployment-k8s-test-web 8080:80
 
-    kubectl rollout history deployment rollout history deployment-k8s-test-web
+    kubectl rollout undo deployment/deployment-k8s-test-web
     
-    kubectl get all
+    kubectl rollout history deployment rollout history deployment-k8s-test-web
 
-    kubectl rollout history deployment/deployment-k8s-test-web
-
+    kubectl port-forward deployment/deployment-k8s-test-web 8080:80
+    
     kubectl delete deployment/deployment-k8s-test-web
 
-    kubectl get pods
+    kubectl get all
+
+    minikube stop
+
+### Challenge 7
+Los comandos utilizados en este reto fueron los siguientes:
+
+    minikube start
+
+    kubectl apply -f guestbook-deployment.yaml
+
+    kubectl apply -f redis-deployment.yaml
+
+    kubectl get all
+
+    kubectl port-forward deployment/guestbook 8080:5000
 
     minikube stop
 
